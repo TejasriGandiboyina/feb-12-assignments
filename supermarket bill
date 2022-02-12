@@ -1,0 +1,29 @@
+hairgel=200
+chocolate=180
+salt=100
+drink=120
+ketchup=60
+cusname=input('enter customer name')
+cusno=int(input('enter customer phone number'))
+hgq=int(input('no of bottles of hair gel'))
+choq=int(input('no of chocolate packets'))
+stq=int(input('enter no of salt packets'))
+drnq=int(input('enter no of drink bottles'))
+ketpq=int(input('enter no of ketchup packets'))
+bill=(hairgel*hgq)+(chocolate*choq)+(salt*stq)+(drink*drnq)+(ketchup*ketpq)
+if bill>=5000:
+      dis=bill*10/100
+      tax=0
+if bill>=3000:
+     dis=bill*8/100
+     tax=0
+elif bill>=2000:
+     dis=bill*5/100
+     if bill>=1000:
+         dis=bill*3/100
+         if bill>=3000:
+             tax=bill*10/100
+else:
+     tax=bill*18/100
+mainbill=bill-dis+tax
+print('bill amount: ', mainbill)
